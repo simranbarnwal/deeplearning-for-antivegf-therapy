@@ -31,6 +31,7 @@ function f = preprocessing_on_all_images()
 	        idx = k; % index number
 	        Y = imresize(X, [60 200]);
 	        imwrite(Y, [Output_folder Outputs{k}],'jpeg');
+		
 	    end
     end
 end
