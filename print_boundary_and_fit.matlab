@@ -1,16 +1,21 @@
-function f = binarize_image(img)
+function func = print_boundary_and_fit(img, lower_retinal_layer, lower_retinal_layer_fit)
 
-% This function binarizes the image to obtain sections with intensities 
-% above mean intensity of image, highlighting the retinal layers
+% This function prints the estimated lower retinal layer
+% and it's polynomial fit
+    x = 1:length(lower_retinal_layer);
+    figure; imshow(img);
+    hold on;
+    imshow(img);
+    scatter(x,lower_retinal_layer,25,'r','filled')
+    hold off;
+    f = getframe;
+    %saveas(f,'lower_retinal_layer',eps)
 
-	img(img<mean(mean(img))) = 0;
-
-	% median filtering to reduce uneveness in the retinal layers boundaries 
-    img = medfilt2(img,[5 5]);
-
-    % distinguishes the retinal layers from the low intensity(<10) background
-    img(img>10) = 200;
-
-    f = img;
+    figure; imshow(img);
+    hold on;
+    imshow(img);
+    scatter(x,lower_retinal_layer_fit,25,'g','filled')
+    hold off;
+    f = getframe;
 
 end
