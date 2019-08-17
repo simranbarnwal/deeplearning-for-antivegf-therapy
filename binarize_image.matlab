@@ -12,5 +12,4 @@ function f = binarize_image(img)
     img(img>10) = 200;
 
     f = img
-
 end
