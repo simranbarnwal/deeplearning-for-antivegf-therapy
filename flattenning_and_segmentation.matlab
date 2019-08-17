@@ -1,6 +1,6 @@
 function f = flattenning_and_segmentation(img)
-%	The function flatten(img) corrects the lower_retinal_layerl curvature of OCT lower_retinal_layer scans 
-%	and gives uniformity to all lower_retinal_layer scans.
+%    The function flatten(img) corrects the lower_retinal_layerl curvature of OCT lower_retinal_layer scans 
+%    and gives uniformity to all lower_retinal_layer scans.
 	
     % original image copy for formatting
     img_cpy = img;
