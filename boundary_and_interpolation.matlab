@@ -9,7 +9,7 @@ function [f1, f2, f3] = binarize_image(img)
 % about the disease
 
 
-	lower_retinal_layer = NaN(1, size(img,2));
+    lower_retinal_layer = NaN(1, size(img,2));
     for j = 1:size(img,2)
         last = find(img(:,j) >= 1, 1, 'last');
     
