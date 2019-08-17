@@ -1,9 +1,9 @@
 function [f1, f2, f3] = binarize_image(img)
 
-% This function estimates the hyper-reflective retinal pigment epithelium (RPE) layer
+% This script estimates the hyper-reflective retinal pigment epithelium (RPE) layer
 % by locating the last occurrences of high intensities in the binarized image
 
-% This function also returns the upper boundary of the retinal layer and 
+% This script also returns the upper boundary of the retinal layer and 
 %the maximum pixel width between lower and upper retinal boundary which would help 
 % in image segmentation: focusing only on the parts of image containing the information
 % about the disease
